@@ -1,35 +1,13 @@
 <!DOCTYPE html>
 
-<!--                      ╭-----------------╮
-╭-------------------------| WEBSITE DETAILS |-------------------------╮
-|                         ╰-----------------╯                         |
-| Project:                                           Immortal Modding |
-| Website:               https://cryonixdev.github.io/ImmortalModding |
-| Version:                                                     0.0.85 |
-| Author:                                            Flaming Immortal |
-| Developer:                                              Cryonix Dev |
-| Company:                                       Cryonix Developments |
-| Language:                                   English Default (Multi) |
-| Scriptors:                                           HTML, CSS & JS |
-| Updated:                                    12/06/2024, 05:45AM EST |
-╰---------------------------------------------------------------------╯
--->
-
 <!-- OPEN-GRAPH & META -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Immortal Modding</title>
-    
-    <meta property="og:title" content="Immortal Modding">
-    <meta property="og:description" content="A collection of content for the PS3. From firmwares and software to games and mods, We have it all!">
-    <meta property="og:image" content="assets/images/branding/logo.webp">
-    <meta property="og:url" content="https://cryonixdev.github.io/ImmortalModding">
-    <meta property="og:type" content="website">
-    <meta name="keywords" content="Immortal, Modding, ImmortalModding, Repo, PlayStation, PlayStation3, PS3, Mods, Modding, Modder, Modders, Hack, Hacks, Hacking, Hacker, Hackers, Software, Firmwares, ROM, ROM's, Games, DLC, Homebrew, Avatars, Trophies, Folders, Soft, Hard, HFW, CFW, Hybrid, Custom, Software, Hardware, Console, Controller, Cables, Trending, Popular, Customisation, Cheat, Cheats, Cheater, PlayStationNetwork, PSN, Network, Friends, Friendly, 4K, Pro, 4KPro, English, French, German, Russian, Italian, Chinese, Japanese, Kit, WebKit, Browser, Settings, Developer, Debugging, Debug">
-    <meta name="description" content="A collection of content for the PS3. From firmwares and software to games and mods, We have it all!">
-    <link rel="icon" href="assets/images/branding/logo.ico" type="image/x-icon">
+    <title>IM | Account</title>
+
+    <link rel="icon" href="https://cryonixdev.github.io/ImmortalModding/assets/images/branding/logo.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -98,120 +76,6 @@
     </style>
 </head>
 <body>
-
-</body>
-</html>
-
-<!-- POPUPS -->
-<html>
-<head>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            display: none;
-        }
-        .popup {
-            background-color: #141414;
-            border: 2px solid red;
-            border-radius: 15px;
-            width: 300px;
-            padding: 20px;
-            text-align: center;
-            color: white;
-        }
-        .popup img {
-            width: 25px;
-            height: 25px;
-        }
-        .popup button {
-            background-color: red;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            margin: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .popup button:hover {
-            background-color: darkred;
-        }
-        .popup select, .popup option {
-            padding: 5px;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-
-<div id="popup1" class="popup-overlay">
-    <div class="popup">
-        <img src="assets/images/icons/cookies.png" alt="Cookie Icon">
-        <p>We use cookies to collect analytical data which helps Us both improve the site, and introduce new features and implementations. Do You accept the use of cookies?</p>
-        <button onclick="nextPopup(2)">Accept</button>
-        <button onclick="nextPopup(2)">Decline</button>
-    </div>
-</div>
-
-<div id="popup2" class="popup-overlay">
-    <div class="popup">
-        <img src="assets/images/icons/devices.png" alt="Cookie Icon">
-        <p id="device-info"></p>
-        <p>We have a device detection feature which helps to display the site in the correct format for Your device / platform. This is to avoid unexpected issues with assets or rendering.</p>
-        <button onclick="nextPopup(3)">OK</button>
-    </div>
-</div>
-
-<div id="popup3" class="popup-overlay">
-    <div class="popup">
-        <img src="assets/images/icons/language.png" alt="Language Icon">
-        <p>Please select your preferred language:</p>
-        <select id="language-select">
-            <option value="en">English</option>
-            <option value="fr">French</option>
-            <option value="es">Spanish</option>
-            <option value="de">German</option>
-
-        </select>
-        <button onclick="closePopups()">OK</button>
-    </div>
-</div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-
-        document.getElementById('popup1').style.display = 'flex';
-
-        var deviceType = "Unknown Device";
-        if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            deviceType = "Mobile Device";
-        } else {
-            deviceType = "Desktop";
-        }
-        document.getElementById('device-info').textContent = "Device: " + deviceType;
-    });
-
-    function nextPopup(popupNumber) {
-        document.querySelector('.popup-overlay[style*="display: flex"]').style.display = 'none';
-        document.getElementById('popup' + popupNumber).style.display = 'flex';
-    }
-
-    function closePopups() {
-        document.querySelectorAll('.popup-overlay').forEach(popup => popup.style.display = 'none');
-        alert('Language selected: ' + document.getElementById('language-select').value);
-    }
-</script>
 
 </body>
 </html>
@@ -347,12 +211,12 @@
 </style>
 </head>
 <body>
-<img src="assets/images/icons/menu.png" class="icon icon-left" id="left-icon">
+<img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/menu.png" class="icon icon-left" id="left-icon">
 <div class="search-bar">
     <input type="text" placeholder="Search...">
-    <img src="assets/images/icons/search.png" class="search-icon" alt="Search Icon">
+    <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/search.png" class="search-icon" alt="Search Icon">
 </div>
-<img src="assets/images/icons/preferences.png" class="icon icon-right" id="right-icon">
+<img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/preferences.png" class="icon icon-right" id="right-icon">
 
 <div class="side-panel" id="side-panel">
     <a href="index.html" class="option"><img src="assets/images/icons/home.png" alt="Icon"> Home</a>
@@ -367,7 +231,7 @@
     <a href="main/downloads/psn/trophies/index.html" class="option"><img src="assets/images/icons/trophies.png" alt="Icon"> Trophies</a>
     <a href="main/misc/account/account/index.html" class="option"><img src="assets/images/icons/account.png" alt="Icon"> Account</a>
     <a href="main/misc/settings/index.html" class="option"><img src="assets/images/icons/settings.png" alt="Icon"> Settings</a>
-    <img src="assets/images/icons/close.png" class="close-icon" id="close-panel-icon">
+    <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/close.png" class="close-icon" id="close-panel-icon">
 </div>
 
 <div class="search-bar" id="search-bar">
@@ -378,17 +242,17 @@
 <div class="settings-panel" id="settings-panel">
     <div class="toggle">
         <span>Theme</span>
-        <img src="assets/images/icons/toggle-off.png" id="toggle-light-dark">
+        <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png" id="toggle-light-dark">
     </div>
     <div class="toggle">
         <span>Background Music</span>
-        <img src="assets/images/icons/toggle-off.png" id="toggle-music">
+        <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png" id="toggle-music">
     </div>
 </div>
 </body>
 </html>
 
-<audio id="background-music" src="assets/audio/audio.m4a" loop></audio>
+<audio id="background-music" src="https://cryonixdev.github.io/ImmortalModding/assets/audio/audio.m4a" loop></audio>
 
 <script>
     document.getElementById('left-icon').addEventListener('click', function() {
@@ -433,7 +297,7 @@
         lightMode = !lightMode;
         document.body.style.backgroundColor = lightMode ? '#ffffff' : '#141414';
         document.body.style.color = lightMode ? '#000000' : '#ffffff';
-        this.src = lightMode ? 'assets/images/icons/toggle-on.png' : 'assets/images/icons/toggle-off.png';
+        this.src = lightMode ? 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-on.png' : 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png';
     });
 
     var musicPlaying = false;
@@ -445,7 +309,7 @@
         } else {
             music.pause();
         }
-        this.src = musicPlaying ? 'assets/images/icons/toggle-on.png' : 'assets/images/icons/toggle-off.png';
+        this.src = musicPlaying ? 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-on.png' : 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png';
     });
 </script>
 <body>
@@ -511,25 +375,21 @@
 </head>
 <body>
     <div class="main-body">
-        <img src="assets/images/branding/logo.webp" alt="Logo" class="logo">
+        <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/branding/logo.webp" alt="Logo" class="logo">
         <div class="title">Immortal Modding</div>
         <div class="icon-text">
-            <div class="text">Welcome to Immortal Modding! A huge collection of content for the PS3. Looking for anything in particular? Whatever it is, We can guarentee that We have it!</div>
         </div>
         <br>
          <br>
         <div class="icon-text">
-         <h4 style="color: white;">What content do We have?</h4>
-            <div class="text">We have almost everything! Here, You can find software, firmwares, games, DLC, mods, homebrew, avatars, trophy folders and customisation files for the XMB and more.</div>
-        </div>
-        <br>
-         <br>
-        <div class="icon-text">
-            <div class="text">If You've come to Our site then You must know what You're doing. If not then please watch a tutorial on how to jailbreak Your console (if You haven't already). The video has in-depth steps which are simple to follow. You can also find the required firmwares needed using the button below or the side menu!</div>
+         <h4 style="color: white;">Account</h4>
+            <div class="text">Got an account with Us? You can sign in below. If not then You can create an account with Us! We're working on a few secret features for the site...</div>
+            <br>
+            <div class="text">Please note that this page is still being worked on so there may be issues. We support Google, Microsoft and Instagram accounts!</div>
         </div>
         <div class="button-container">
-            <button class="button" onclick="redirect('https://youtube.com/VIDEO LINK GOES HERE')">Tutorial</button>
-            <button class="button" onclick="redirect('main/downloads/misc/firmwares')">Firmwares</button>
+            <button class="button" onclick="redirect('LINK')">Sign In</button>
+            <button class="button" onclick="redirect('LINK')">Create Account</button>
         </div>
     </div>
 
