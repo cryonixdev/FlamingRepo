@@ -1,4 +1,4 @@
-# FlamingRepo
+# Immortal Modding
 A collection of content for the PS3!
 
 ### What content does this site have?
