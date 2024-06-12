@@ -3,8 +3,8 @@
 <!--                      ╭-----------------╮
 ╭-------------------------| WEBSITE DETAILS |-------------------------╮
 |                         ╰-----------------╯                         |
-| Project:                                               Flaming Repo |
-| Website:                   https://cryonixdev.github.io/FlamingRepo |
+| Project:                                           Immortal Modding |
+| Website:               https://cryonixdev.github.io/ImmortalModding |
 | Version:                                                     0.0.85 |
 | Author:                                            Flaming Immortal |
 | Developer:                                              Cryonix Dev |
@@ -20,14 +20,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flaming Repo</title>
+    <title>Immortal Modding</title>
     
-    <meta property="og:title" content="Flaming Repo">
+    <meta property="og:title" content="Immortal Modding">
     <meta property="og:description" content="A collection of content for the PS3. From firmwares and software to games and mods, We have it all!">
     <meta property="og:image" content="assets/images/branding/logo.webp">
-    <meta property="og:url" content="https://cryonixdev.github.io/FlamingRepo">
+    <meta property="og:url" content="https://cryonixdev.github.io/ImmortalModding">
     <meta property="og:type" content="website">
-    <meta name="keywords" content="Flaming, Repo, PlayStation, PlayStation3, PS3, Mods, Modding, Modder, Modders, Hack, Hacks, Hacking, Hacker, Hackers, Software, Firmwares, ROM, ROM's, Games, DLC, Homebrew, Avatars, Trophies, Folders, Soft, Hard, HFW, CFW, Hybrid, Custom, Software, Hardware, Console, Controller, Cables, Trending, Popular, Customisation, Cheat, Cheats, Cheater, PlayStationNetwork, PSN, Network, Friedns, Friendly, 4K, Pro, 4KPro, English, French, German, Russian, Italian, Chinese, Japanese, Kit, WebKit, Browser, Settings, Developer, Debugging, Debug">
+    <meta name="keywords" content="Immortal, Modding, ImmortalModding, Repo, PlayStation, PlayStation3, PS3, Mods, Modding, Modder, Modders, Hack, Hacks, Hacking, Hacker, Hackers, Software, Firmwares, ROM, ROM's, Games, DLC, Homebrew, Avatars, Trophies, Folders, Soft, Hard, HFW, CFW, Hybrid, Custom, Software, Hardware, Console, Controller, Cables, Trending, Popular, Customisation, Cheat, Cheats, Cheater, PlayStationNetwork, PSN, Network, Friends, Friendly, 4K, Pro, 4KPro, English, French, German, Russian, Italian, Chinese, Japanese, Kit, WebKit, Browser, Settings, Developer, Debugging, Debug">
     <meta name="description" content="A collection of content for the PS3. From firmwares and software to games and mods, We have it all!">
     <link rel="icon" href="assets/images/branding/logo.ico" type="image/x-icon">
 </head>
@@ -240,10 +240,6 @@
     .icon-left {
         left: 10px;
     }
-    .icon-center {
-        left: 50%;
-        transform: translateX(-50%);
-    }
     .icon-right {
         right: 10px;
     }
@@ -293,23 +289,31 @@
     }
     .search-bar {
         position: fixed;
-        top: 60px;
+        top: 10px;
         left: 50%;
         transform: translateX(-50%);
-        display: none;
+        display: flex;
+        align-items: center;
         background-color: #141414;
         border: 2px solid red;
         border-radius: 25px;
-        padding: 10px;
+        padding: 5px 10px;
         width: 300px;
     }
     .search-bar input {
-        width: 100%;
+        flex-grow: 1;
         padding: 5px;
         border: none;
         outline: none;
         color: white;
         background-color: transparent;
+        font-size: 16px;
+    }
+    .search-bar .search-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        cursor: pointer;
     }
     .search-results {
         display: none;
@@ -344,7 +348,10 @@
 </head>
 <body>
 <img src="assets/images/icons/menu.png" class="icon icon-left" id="left-icon">
-<img src="assets/images/icons/search.png" class="icon icon-center" id="center-icon">
+<div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <img src="assets/images/icons/search.png" class="search-icon" alt="Search Icon">
+</div>
 <img src="assets/images/icons/preferences.png" class="icon icon-right" id="right-icon">
 
 <div class="side-panel" id="side-panel">
@@ -505,9 +512,9 @@
 <body>
     <div class="main-body">
         <img src="assets/images/branding/logo.webp" alt="Logo" class="logo">
-        <div class="title">Flaming Repo</div>
+        <div class="title">Immortal Modding</div>
         <div class="icon-text">
-            <div class="text">Welcome to the Flaming Repo! A huge collection of content for the PS3. Looking for anything in particular? Whatever it is, We can guarentee that We have it!</div>
+            <div class="text">Welcome to Immortal Modding! A huge collection of content for the PS3. Looking for anything in particular? Whatever it is, We can guarentee that We have it!</div>
         </div>
         <br>
          <br>
@@ -566,7 +573,7 @@
 
 
 <div class="footer" id="footer">
-    &copy; Flaming Repo 2024, All Rights Reserved.
+    &copy; Immortal Modding 2024, All Rights Reserved.
 </div>
 
 </body>

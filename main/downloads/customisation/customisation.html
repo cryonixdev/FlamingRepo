@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<!-- OPEN-GRAPH & META -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IM | Customisation</title>
+
+    <link rel="icon" href="https://cryonixdev.github.io/ImmortalModding/assets/images/branding/logo.ico" type="image/x-icon">
+</head>
+<body>
+
+</body>
+</html>
+
+<!-- SCROLLBAR -->
+<html>
+<head>
+    <style>
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #141414;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #000;
+        }
+        
+        .scrollable {
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+
+    </div>
+</body>
+</html>
+
+<!-- BACKGROUND -->
+<html>
+<head>
+
+    <style>
+
+        @keyframes gradientAnimation {
+            0%, 100% { background-position: 0% 0%; }
+            25% { background-position: 100% 0%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+        }
+
+        body {
+            background: linear-gradient(-45deg, orange, black, purple, black, orange);
+            background-size: 600% 600%;
+            animation: gradientAnimation 30s linear infinite;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>
+
+<!-- MENU, PREFERENCES & SEARCH -->
+<html>
+<head>
+<style>
+    :root {
+        --icon-size: 30px;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .icon {
+        position: fixed;
+        top: 10px;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        cursor: pointer;
+    }
+    .icon-left {
+        left: 10px;
+    }
+    .icon-right {
+        right: 10px;
+    }
+    .side-panel {
+        position: fixed;
+        top: 10px;
+        left: -300px;
+        width: 250px;
+        height: 85%;
+        background-color: #141414;
+        border: 2px solid red;
+        border-radius: 15px;
+        overflow-y: auto;
+        transition: left 0.3s;
+        display: none;
+    }
+    .side-panel.open {
+        display: block;
+        left: 10px;
+    }
+    .side-panel .close-icon {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        width: calc(var(--icon-size) * 0.83);
+        height: calc(var(--icon-size) * 0.83);
+        transform: translateX(-50%);
+        cursor: pointer;
+    }
+    .side-panel .option {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        color: white;
+        cursor: pointer;
+        text-decoration: none;
+        border-radius: 10px;
+    }
+    .side-panel .option img {
+        width: 20px;
+        height: 20px;
+        margin-right: 10px;
+    }
+    .side-panel .option:hover {
+        background-color: white;
+        color: #141414;
+    }
+    .search-bar {
+        position: fixed;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        background-color: #141414;
+        border: 2px solid red;
+        border-radius: 25px;
+        padding: 5px 10px;
+        width: 300px;
+    }
+    .search-bar input {
+        flex-grow: 1;
+        padding: 5px;
+        border: none;
+        outline: none;
+        color: white;
+        background-color: transparent;
+        font-size: 16px;
+    }
+    .search-bar .search-icon {
+        width: 20px;
+        height: 20px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+    .search-results {
+        display: none;
+        background-color: white;
+        border-radius: 15px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+    .settings-panel {
+        position: fixed;
+        top: 50px;
+        right: 10px;
+        display: none;
+        background-color: #141414;
+        border: 2px solid red;
+        border-radius: 15px;
+        padding: 10px;
+        width: 200px;
+        color: white;
+    }
+    .toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+    }
+    .toggle img {
+        width: 20px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+<img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/menu.png" class="icon icon-left" id="left-icon">
+<div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/search.png" class="search-icon" alt="Search Icon">
+</div>
+<img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/preferences.png" class="icon icon-right" id="right-icon">
+
+<div class="side-panel" id="side-panel">
+    <a href="index.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/home.png" alt="Icon"> Home</a>
+    <a href="main/info/about.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/info.png" alt="Icon"> Info</a>
+    <a href="main/downloads/misc/software.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/software.png" alt="Icon"> Software</a>
+    <a href="main/downloads/misc/firmwares.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/firmwares.png" alt="Icon"> Firmwares</a>
+    <a href="main/downloads/gaming/games.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/games.png" alt="Icon"> Games</a>
+    <a href="main/downloads/gaming/dlc.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/dlc.png" alt="Icon"> DLC</a>
+    <a href="main/downloads/gaming/mods.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/mods.png" alt="Icon"> Mods</a>
+    <a href="main/downloads/misc/homebrew.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/homebrew.png" alt="Icon"> Homebrew</a>
+    <a href="main/downloads/customisation/customisation.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/customisation.png" alt="Icon"> Customisation</a>
+    <a href="main/downloads/psn/trophies.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/trophies.png" alt="Icon"> Trophies</a>
+    <a href="main/misc/account/account.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/account.png" alt="Icon"> Account</a>
+    <a href="main/misc/settings.html" class="option"><img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/settings.png" alt="Icon"> Settings</a>
+    <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/close.png" class="close-icon" id="close-panel-icon">
+</div>
+
+<div class="search-bar" id="search-bar">
+    <input type="text" id="search-input" placeholder="Search...">
+    <div class="search-results" id="search-results"></div>
+</div>
+
+<div class="settings-panel" id="settings-panel">
+    <div class="toggle">
+        <span>Theme</span>
+        <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png" id="toggle-light-dark">
+    </div>
+    <div class="toggle">
+        <span>Background Music</span>
+        <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png" id="toggle-music">
+    </div>
+</div>
+</body>
+</html>
+
+<audio id="background-music" src="https://cryonixdev.github.io/ImmortalModding/assets/audio/audio.m4a" loop></audio>
+
+<script>
+    document.getElementById('left-icon').addEventListener('click', function() {
+        document.getElementById('side-panel').classList.toggle('open');
+    });
+
+    document.getElementById('close-panel-icon').addEventListener('click', function() {
+        document.getElementById('side-panel').classList.remove('open');
+    });
+
+    document.getElementById('center-icon').addEventListener('click', function() {
+        var searchBar = document.getElementById('search-bar');
+        searchBar.style.display = searchBar.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.getElementById('search-input').addEventListener('input', function() {
+        var query = this.value.toLowerCase();
+        var results = document.getElementById('search-results');
+        results.style.display = query ? 'block' : 'none';
+        results.innerHTML = '';
+
+        var items = ['Content 1', 'Content 2', 'Content 3'];
+        items.forEach(function(item) {
+            if (item.toLowerCase().includes(query)) {
+                var resultItem = document.createElement('div');
+                resultItem.textContent = item;
+                resultItem.addEventListener('click', function() {
+                    window.location.href = '/content/' + item.toLowerCase().replace(/ /g, '-');
+                });
+                results.appendChild(resultItem);
+            }
+        });
+    });
+
+    document.getElementById('right-icon').addEventListener('click', function() {
+        var settingsPanel = document.getElementById('settings-panel');
+        settingsPanel.style.display = settingsPanel.style.display === 'block' ? 'none' : 'block';
+    });
+
+    var lightMode = false;
+    document.getElementById('toggle-light-dark').addEventListener('click', function() {
+        lightMode = !lightMode;
+        document.body.style.backgroundColor = lightMode ? '#ffffff' : '#141414';
+        document.body.style.color = lightMode ? '#000000' : '#ffffff';
+        this.src = lightMode ? 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-on.png' : 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png';
+    });
+
+    var musicPlaying = false;
+    document.getElementById('toggle-music').addEventListener('click', function() {
+        musicPlaying = !musicPlaying;
+        var music = document.getElementById('background-music');
+        if (musicPlaying) {
+            music.play();
+        } else {
+            music.pause();
+        }
+        this.src = musicPlaying ? 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-on.png' : 'https://cryonixdev.github.io/ImmortalModding/assets/images/icons/toggle-off.png';
+    });
+</script>
+<body>
+</body>
+<html>
+</html>
+
+<!-- MAIN BODY -->
+<html>
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .main-body {
+            background-color: #141414;
+            border: 2px solid red;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+        .logo {
+            width: 50px;
+            height: auto;
+        }
+        .title {
+            color: white;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .icon-text {
+            margin-top: 20px;
+        }
+        .text {
+            color: white;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+        .button-container {
+            margin-top: 30px;
+        }
+        .button {
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .button:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-body">
+        <img src="https://cryonixdev.github.io/ImmortalModding/assets/images/branding/logo.webp" alt="Logo" class="logo">
+        <div class="title">Immortal Modding</div>
+        <div class="icon-text">
+        </div>
+        <br>
+         <br>
+        <div class="icon-text">
+         <h4 style="color: white;">Customisation</h4>
+            <div class="text">Wanting to make Your console look unique? Feel free to change anything and everything until Your heart's content!</div>
+        </div>
+        <div class="button-container">
+            <button class="button" onclick="redirect('LINK')">Account Avatars</button>
+            <button class="button" onclick="redirect('LINK')">XML Files</button>
+            <button class="button" onclick="redirect('LINK')">Themes</button>
+            <button class="button" onclick="redirect('LINK')">Wallpapers</button>
+        </div>
+    </div>
+
+    <script>
+        function redirect(url) {
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>
+
+<!-- FOOTER -->
+<html>
+<head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #141414;
+        border-top: 2px solid red;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        z-index: 1000;
+    }
+</style>
+</head>
+<body>
+
+
+<div class="content">
+
+</div>
+
+
+<div class="footer" id="footer">
+    &copy; Immortal Modding 2024, All Rights Reserved.
+</div>
+
+</body>
+</html>
